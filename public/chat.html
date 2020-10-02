@@ -2,14 +2,14 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Chat | DevChat</title>
     <meta name="viewport" content="width=device-width, inital-scale=1, user-scalable=no">
     <link rel="stylesheet" href="/css/styles.css">
   </head>
   <body class="chat">
 
     <div class="chat__sidebar">
-      <h3>People</h3>
+      <h3 id="room-log">People -</h3>
       <div id="users"></div>
     </div>
 
@@ -53,5 +53,11 @@
     <script type="text/javascript" src="/js/chat.js"></script>
     <script type="text/javascript" src="/js/libs/moment.js"></script>
     <script type="text/javascript" src="/js/libs/mustache.js"></script>
+    <script>
+      var url = new URL(window.location.href);
+      var roomzlog = url.searchParams.get("room");
+      console.log(roomzlog);
+      document.getElementById('room-log').innerText += " " + roomzlog;
+    </script>
   </body>
 </html>
