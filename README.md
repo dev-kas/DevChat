@@ -1,4 +1,4 @@
-# DevChat - [Live](https://dev2client.herokuapp.com/ "Yes!!! You can view it right now! Dont belive me? Click here.")
+# DevChat - [Live](https://dev2client.herokuapp.com/ "Yes!!! You can view it right now! Don't belive me? Click here.")
 
 ## Steps to install is on your local machine, use these commands on your mac terminal or windows cmd:-
 
