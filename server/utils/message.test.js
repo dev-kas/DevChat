@@ -1,3 +1,7 @@
+/*
+ *   Copyright (c) 2020 
+ *   All rights reserved.
+ */
 let expect = require('expect');
 
 var {generateMessage, generateLocationMessage} = require('./message');

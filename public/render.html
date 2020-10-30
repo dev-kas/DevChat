@@ -10,17 +10,17 @@
     <div class="centered-form__highlight">
       <h3>Welcome to DevChat</h3>
       <div class="centered-form__form">
-        <form action="/render.html">
+        <form action="/chat.html">
           <div class="form-field">
             <h3>Join Chat</h3>
           </div>
+          <input type="text" name="name" hidden id="name">
           <div class="form-field">
-            <label>User name:</label>
-            <input required type="text" placeholder="e.g. Jhon Deo" name="name" autofocus>
+            <label>Room name:</label>
+            <input required type="text" placeholder="e.g. DevChat-Development" name="room" autofocus>
           </div>
-          
           <div class="form-field">
-            <button type="submit">Next</button>
+            <button type="submit">Join</button>
           </div>
         </form>
       </div>
@@ -28,5 +28,11 @@
     <p class="copyright">
       codeGame
     </p>
+    <script type="module">
+        import URLparam from "./js/URLparam.js";
+        var name = document.getElementById("name");
+
+        name.value = URLparam(window.location.href, "name");
+    </script>
   </body>
 </html>

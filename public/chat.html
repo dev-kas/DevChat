@@ -4,13 +4,18 @@
     <meta charset="utf-8">
     <title>Chat | DevChat</title>
     <meta name="viewport" content="width=device-width, inital-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body class="chat">
+    <p class="copyright-chat">
+      codeGame
+    </p>
 
     <div class="chat__sidebar">
       <h3 id="room-log">People -</h3>
-      <div id="users"></div>
+      <div id="users">
+
+      </div>
     </div>
 
     <div class="chat__main">
@@ -18,7 +23,7 @@
 
       <div class="chat__footer">
         <form id="message-form">
-          <input name="message" type="text" placeholder="Message" autofocus autocomplete="off"/>
+          <input name="message" type="text" id="privatejsMsg" placeholder="Message" autofocus autocomplete="off"/>
           <button id="submit-btn">Send</button>
         </form>
         <button id="send-location">Send location</button>
@@ -59,5 +64,6 @@
       console.log(roomzlog);
       document.getElementById('room-log').innerText += " " + roomzlog;
     </script>
+    <script src="/js/private.js"></script>
   </body>
 </html>

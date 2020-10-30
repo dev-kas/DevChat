@@ -1,3 +1,7 @@
+/*
+ *   Copyright (c) 2020 
+ *   All rights reserved.
+ */
 const expect = require('expect');
 
 const {Users} = require('./users');

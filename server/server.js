@@ -1,3 +1,7 @@
+/*
+ *   Copyright (c) 2020 
+ *   All rights reserved.
+ */
 const path = require('path');
 const http = require('http');
 const express = require('express');
@@ -8,7 +12,7 @@ const {isRealString} = require('./utils/isRealString');
 const {Users} = require('./utils/users');
 
 const publicPath = path.join(__dirname, '/../public');
-const port = process.env.PORT || 5500
+const port = process.env.PORT || 3000
 let app = express();
 let server = http.createServer(app);
 let io = socketIO(server);
@@ -66,3 +70,9 @@ io.on('connection', (socket) => {
 server.listen(port, ()=>{
   console.log(`Server is up on port ${port}`);
 })
+
+// 404
+
+app.get("*", function(req, res, next) {
+  res.status(404).sendFile(path.join(__dirname, "../views/404.html"));
+});

@@ -1,3 +1,7 @@
+/*
+ *   Copyright (c) 2020 codeGame
+ *   All rights reserved.
+ */
 //! moment.js
 
 ;(function (global, factory) {

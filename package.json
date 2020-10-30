@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "icon": "img/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Krishaang-Sinha/DevChat"
+  },
   "scripts": {
     "start": "node server/server.js",
     "test": "mocha server/**/*.test.js",

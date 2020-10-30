@@ -136,6 +136,10 @@ button:disabled {
 }
 .message {
     padding: 10px;
+    background: #efefef;
+    width: fit-content;
+    margin: 10px;
+    border-radius: 10px;
 }
 .message__title {
     display: flex;
@@ -175,4 +179,31 @@ button:disabled {
     );
     height: auto;
     color: #efefef;
+    border-radius: 10px;
+}
+
+.copyright {
+    color: #fafafa;
+    font-weight: bold;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
+.copyright-chat {
+    color: #0f0f0f;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-bottom: 50px;
+    font-size: 20px;
+    background: #e0e0e0;
+    padding: 5px 10px 5px 10px;
+    margin: 5px;
+}
+
+.aUser {
+    cursor: pointer;
 }
