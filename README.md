@@ -16,7 +16,7 @@ and
 
 `npm start`
 
-after that, go to [http://localhost:5500](http://localhost:5500 "http://localhost:5500")
+after that, go to [http://localhost:3000](http://localhost:3000 "http://localhost:3000")
 
 ## Screenshots
 
