@@ -2,7 +2,7 @@
 
 ## Steps to install is on your local machine, use these commands on your mac terminal or windows cmd:-
 
-`$ git clone https://github.io/Krishaang-Sinha/DevChat.git`
+`$ git clone https://github.io/GlitchieTheDev/DevChat.git`
 
 then,
 
